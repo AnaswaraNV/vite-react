@@ -7,6 +7,7 @@ export default function TodoInput() {
 
     const handleAdd = () => {
         if (text) add(text);
+        setText('');
     }
     return (<div className="row">
         <input className="col-md-6"

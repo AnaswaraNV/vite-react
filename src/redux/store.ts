@@ -1,5 +1,7 @@
-import {legacy_createStore} from "redux";
-import {rootReducers} from "./reducers.ts";
-
-export const store = legacy_createStore(rootReducers);
-export type RootState = ReturnType<typeof rootReducers>;
+import {configureStore} from "@reduxjs/toolkit";
+import todoReducer from './slices/todoReducer.ts'
+export const store = configureStore({
+    reducer: todoReducer
+});
+export type RootState = ReturnType<typeof store.getState>;
+export type RootDispatch = typeof store.dispatch;

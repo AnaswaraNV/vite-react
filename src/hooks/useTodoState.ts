@@ -1,11 +1,11 @@
 import {useDispatch, useSelector} from "react-redux";
-import type {RootState} from "../redux/store.ts";
-import {addTodo, deleteTodo, setFilter, toggleTodo} from "../redux/actions.ts";
+import type {RootState, RootDispatch} from "../redux/store.ts";
 import type {Filter} from "../types/Todo.ts";
+import {addTodo, deleteTodo, setFilter, toggleTodo} from "../redux/slices/todoReducer.ts";
 
 export function useTodoState() {
     const {todos, filter} = useSelector((state: RootState) => state); //grabs the entire state and destructure
-    const dispatch = useDispatch();
+    const dispatch = useDispatch<RootDispatch>();
 
     return {
         todos,

@@ -9,13 +9,15 @@ export default function TodoInput() {
         if (text) add(text);
         setText('');
     }
-    return (<div className="row">
-        <input className="col-md-6"
-        type="text"
-        value={text}
-        onChange={(e) => setText(e.target.value)}/>
-        <button className="col-md-6" onClick={handleAdd}>
-            Add
-        </button>
-    </div>)
+    return (
+        <div className="row">
+            <input className="col-md-6"
+            type="text"
+            value={text}
+            onChange={(e) => setText(e.target.value)}/>
+            <button className="col-md-6" onClick={handleAdd}>
+                Add
+            </button>
+        </div>
+    )
 }

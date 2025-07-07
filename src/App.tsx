@@ -2,6 +2,7 @@ import './App.css'
 import TodoInput from "./components/TodoInput.tsx";
 import FilterTabs from "./components/FilterTabs.tsx";
 import TodoList from "./components/TodoList.tsx";
+import FibonacciSeriesDisplay from "./components/FibonacciSeries.tsx";
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
           <TodoInput/>
           <FilterTabs/>
           <TodoList/>
+          <FibonacciSeriesDisplay/>
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more

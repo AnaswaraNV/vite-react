@@ -7,13 +7,14 @@ export function useFibonacciSeries(){
 
     const fibonacciSeriesEntry = (n: number): number => {
         if (n < 0) return -1;
-        if (n <=  1) return n;
+        if (n == 1) return 0;
+        if(n== 2) return 1;
         return fibonacciSeriesEntry(n - 1) + fibonacciSeriesEntry(n - 2);
     }
         //n=2
         const displayFibonacci = (n: number) => {
             const resultArray: number[] = [];
-            for (let i = 0; i < n; i++){
+            for (let i = 1; i <=  n; i++){
                 const result = fibonacciSeriesEntry(i); // 0,
                 resultArray.push(result);
             }

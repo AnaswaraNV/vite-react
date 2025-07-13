@@ -5,6 +5,7 @@ import {useSelector} from "react-redux";
 export function useFilteredTodos () {
     const {todos, filter} = useSelector((state: RootState) => state);
 
+
     return todos.filter(todo => {
         if (filter == 'ACTIVE') { return !todo.completed }
         if (filter == 'COMPLETED') { return todo.completed}

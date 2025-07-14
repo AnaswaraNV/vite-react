@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-        <h1 className="text-3xl font-bold mb-6">Dashboard</h1>
+        <h1 className="text-3xl font-bold mb-6">MultiApp</h1>
 
         <div className="cards p-6 bg-gray-50 rounded-lg shadow-md">
             <nav className="m-6 flex space-x-6 text-lg">
